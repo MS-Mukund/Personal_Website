@@ -97,11 +97,13 @@ footer {
 }
 
 #Form input {
+    /* makes the borders round */
     border-radius: 8px;
     border: 1px solid red;
 }
 
 #Form select {
+    /* makes the borders round */
     border-radius: 6px;
     border: 1px solid grey;
     width: 200px;
@@ -137,12 +139,14 @@ table, th {
 }
 
 #table {
+    /* makes the borders round */
     border-radius: 10px;
 }
 .cells th, td{
     color: black;
     background-color: rgb(0,0,0,0.75);
     padding: 10px;
+    /* makes the borders round */
     border-radius: 8px;
 }
 
@@ -175,10 +179,12 @@ table, th {
 #FormTable {
     border-spacing: 0px;
     background: rgb(0,0,0,0.5);
+    /* makes the borders round */
     border-radius: 15px;
 }
 
 #FormTable th {
+    /* makes the borders round */
     border-radius: 10px;
 }
 
@@ -191,6 +197,7 @@ table, th {
     margin-top: 10px;
     margin-left: 350px;
     margin-bottom: 100px;
+    /* makes the borders round */
     border-radius: 10px;
 }
 
@@ -225,6 +232,7 @@ table, th {
     cursor: pointer;
     position: absolute;
     top: 50%;
+    /* makes the borders round */
     border-radius: 5px;
 
   }
@@ -256,6 +264,7 @@ table, th {
 .logos {
     margin: 5vh 45vw;
     padding: 0.5vw;
+    /* makes the borders round */
     border-radius: 0.5vw;
 }
 

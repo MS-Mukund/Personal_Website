@@ -1,10 +1,12 @@
 function NavHover(Elem)
 {
-    Elem.style.color = "#14f15e";
+    // changes the color to GREEN
+    Elem.style.color = "#14f15e";     
 }
 
 function NavOut(Elem)
 {
+    // changes color back to WHITE
     Elem.style.color = "white";
 }
 
@@ -45,32 +47,23 @@ var SkillDict = {};
 var profDict = {}; 
 
 function AppendRow() {      //for the dynamic addition of table
-          
+    // retrieving the data      
     var name = document.getElementById("name").value;
     var skill = document.getElementById("skill").value;
     var table = document.getElementById("FormTable");
     var prof = document.getElementById("level").value;
-    
-    if( name === "")
-    {
-        alert("Name cannot be empty");
-        return;
-    }
-
-    if( skill === "")
-    {
-        alert("skill cannot be empty");
-        return;
-    }
-
+  
+    // storing the data 
     NameArr.push(name);
     SkillDict[name] = skill;
     profDict[name] = prof;
     
+    // creating a row
     var Numrows = table.rows.length;
-    var row = table.insertRow(Numrows);
+    var row = table.insertRow(Numrows);  // inserts empty row
     
-    row.insertCell(0).innerHTML= name;
+    // inserting the cells
+    row.insertCell(0).innerHTML= name;    // fills first cell
     row.insertCell(1).innerHTML= skill;
     row.insertCell(2).innerHTML= prof; 
 }
@@ -78,29 +71,27 @@ function AppendRow() {      //for the dynamic addition of table
 //////////////////////////////////////////
 
 var ptr = 0;
-
 function Display()
 {
     var NumSlide = document.getElementsByClassName("pics");
 
     for ( var i = 0; i < NumSlide.length; i++ )
     {
-        NumSlide[i].style.display = "none";  
+        NumSlide[i].style.display = "none";  // Hide ALL images
     }
-
-    NumSlide[ptr].style.display = "block";  
+    NumSlide[ptr].style.display = "block";    // Display ONLY the 'ptr' image
 }
 
 function Increment()
 {
-    ptr++;
-    ptr %= 5;
+    ptr++;    // picture number - 0 1 2 3 4, 0 1 2 3 4 
+    ptr %= 5;   
     Display(ptr);
 }
 
 function Decrement()
 {
-    ptr--;
+    ptr--;      // picture number
     ptr += 5;
     ptr %= 5;
     
